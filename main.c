@@ -1,6 +1,8 @@
 #include "common.h"
-#include "chunk.h"
 #include "debug.h"
+#include "chunk.h"
+
+#include <stdio.h>
 
 int main(int argc, char *argv[]) {
     Chunk chunk;
@@ -8,5 +10,6 @@ int main(int argc, char *argv[]) {
     writeChunk(&chunk, OP_RETURN);
     disassembleChunk(&chunk, "test chunk");
     freeChunk(&chunk);
+    printf("Hello, world!\n");
     return 0;
 }
